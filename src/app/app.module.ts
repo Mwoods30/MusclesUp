@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './auth.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProfileComponent } from './profile/profile.component';
 import { WorkoutComponent } from './workout/workout.component';
-import { SigninComponent } from './signin/signin.component';
+import { SignUpComponent } from './auth/signup/signup.component';
 
 import { routes } from './app.routes';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,19 @@ import { routes } from './app.routes';
     HomeComponent,
     ProfileComponent,
     WorkoutComponent,
-    SigninComponent
+    SignUpComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [  provideHttpClient(withInterceptorsFromDi()),  // <-- NEW way to provide HttpClient
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

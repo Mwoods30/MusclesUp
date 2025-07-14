@@ -1,15 +1,33 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ProfileComponent } from './profile/profile.component';
-import { WorkoutComponent } from './workout/workout.component';
-import { SigninComponent } from './signin/signin.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },           // default route (home)
-  { path: 'profile', component: ProfileComponent },
-  { path: 'workout', component: WorkoutComponent },
-  { path: 'signin', component: SigninComponent },
-
-  // Optional: redirect unknown URLs to home
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  {
+    path: 'home',
+    loadComponent: () =>
+      import('./home/home.component').then((m) => m.HomeComponent),
+  },
+  {
+    path: 'profile',
+    loadComponent: () =>
+      import('./profile/profile.component').then((m) => m.ProfileComponent),
+  },
+  {
+    path: 'workout',
+    loadComponent: () =>
+      import('./workout/workout.component').then((m) => m.WorkoutComponent),
+  },
+ {
+    path: 'signin',
+    loadComponent: () =>
+      import('./auth/signup/signup.component').then((m) => m.SignUpComponent),
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
+  },
 ];

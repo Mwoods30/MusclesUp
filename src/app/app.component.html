@@ -1,5 +1,5 @@
 <style>
-html, body {
+.body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -7,28 +7,29 @@ html, body {
 }
 
 /* Navigation */
-.nav-bar {
+.nav-links {
   display: flex;
   gap: 2rem;
   font-family: sans-serif;
+  font-size: 1.5rem;
 }
 
-.nav-bar a {
+.nav-links a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-.nav-bar a:hover {
+.nav-links a:hover {
   color: red;
   cursor: pointer;
 }
 
-.nav {
+.nav-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #333;
+  background-color: #5f5e5e;
   padding: 1rem 2rem;
   border-bottom: 3px solid red;
 }
@@ -40,7 +41,7 @@ html, body {
 }
 
 .logo {
-  height: 40px;
+  height: 70px;
 }
 
 .nav-title {
@@ -50,7 +51,8 @@ html, body {
 }
 </style>
 
-<nav class="nav">
+<!-- Corrected navigation bar -->
+<nav class="nav-section">
   <div class="nav-left">
     <a routerLink="/">
       <img src="MusclesUp.png" alt="Logo" class="logo" />
@@ -58,7 +60,8 @@ html, body {
     <h1 class="nav-title">MusclesUp</h1>
   </div>
 
-  <div class="nav-bar">
+  <!-- Fixed class name and removed nested <nav> -->
+  <div class="nav-links">
     <a routerLink="/">Home</a>
     <a routerLink="/profile">Profile</a>
     <a routerLink="/workout">Workout</a>
