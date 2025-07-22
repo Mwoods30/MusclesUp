@@ -5,7 +5,7 @@ export class UserService {
   private userDataSource = new BehaviorSubject({email : '', password : ''});
   currentUserData = this.userDataSource.asObservable();
   constructor() { }
-  changeData(newUserData) {
+  changeData(newUserData: any) {
     this.userDataSource.next(newUserData)
   }
 }

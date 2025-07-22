@@ -1,12 +1,12 @@
 import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import { UserService } from "../../user.service";
-import { Keyboard } from 'simple-keyboard';
+import Keyboard from 'simple-keyboard';
 @Component({
   
   selector: 'app-sign-up',
   encapsulation: ViewEncapsulation.None,
   templateUrl: './signup.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['./signup.component.css']
 })
 export class SignUpComponent implements OnInit {
   userData: any;
