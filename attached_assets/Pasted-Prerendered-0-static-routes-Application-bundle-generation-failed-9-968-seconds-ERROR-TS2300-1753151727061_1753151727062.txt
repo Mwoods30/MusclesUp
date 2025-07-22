@@ -1,0 +1,240 @@
+Prerendered 0 static routes.
+Application bundle generation failed. [9.968 seconds]
+
+✘ [ERROR] TS2300: Duplicate identifier 'Component'. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:1:9:
+      1 │ import { Component, OnInit } from "@angular/core";
+        ╵          ~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'OnInit'. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:1:20:
+      1 │ import { Component, OnInit } from "@angular/core";
+        ╵                     ~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'UserService'. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:2:9:
+      2 │ import { UserService } from "./user.service";
+        ╵          ~~~~~~~~~~~
+
+
+✘ [ERROR] TS2307: Cannot find module './user.service' or its corresponding type declarations. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:2:28:
+      2 │ import { UserService } from "./user.service";
+        ╵                             ~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'LoginComponent'. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:8:13:
+      8 │ export class LoginComponent implements OnInit {
+        ╵              ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS7008: Member 'userData' implicitly has an 'any' type. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:9:2:
+      9 │   userData;
+        ╵   ~~~~~~~~
+
+
+✘ [ERROR] TS-992003: No suitable injection token for parameter 'user' of class 'LoginComponent'.
+  Consider using the @Inject decorator to specify an injection token. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:10:22:
+      10 │   constructor(private user: UserService) {}
+         ╵                       ~~~~
+
+  This type does not have a value, so it cannot be used as injection token.
+
+    src/app/auth/login/login.component.ts:10:28:
+      10 │   constructor(private user: UserService) {}
+         ╵                             ~~~~~~~~~~~
+
+
+✘ [ERROR] TS7006: Parameter 'userData' implicitly has an 'any' type. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:13:40:
+      13 │ ...r.currentUserData.subscribe(userData => (this.userData = userDa...
+         ╵                                ~~~~~~~~
+
+
+✘ [ERROR] TS7006: Parameter 'event' implicitly has an 'any' type. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:16:13:
+      16 │   changeData(event) {
+         ╵              ~~~~~
+
+
+✘ [ERROR] TS7006: Parameter 'data' implicitly has an 'any' type. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:20:8:
+      20 │   login(data) {
+         ╵         ~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'Component'. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:24:9:
+      24 │ import { Component, OnInit } from '@angular/core';
+         ╵          ~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'OnInit'. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:24:20:
+      24 │ import { Component, OnInit } from '@angular/core';
+         ╵                     ~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'UserService'. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:25:9:
+      25 │ import { UserService } from "../../user.service";
+         ╵          ~~~~~~~~~~~
+
+
+✘ [ERROR] The symbol "LoginComponent" has already been declared
+
+    src/app/auth/login/login.component.ts:28:4:
+      28 │ let LoginComponent = class LoginComponent {
+         ╵     ~~~~~~~~~~~~~~
+
+  The symbol "LoginComponent" was originally declared here:
+
+    src/app/auth/login/login.component.ts:3:4:
+      3 │ let LoginComponent = class LoginComponent {
+        ╵     ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2300: Duplicate identifier 'LoginComponent'. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:32:13:
+      32 │ export class LoginComponent implements OnInit {
+         ╵              ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS-992003: No suitable injection token for parameter 'user' of class 'LoginComponent'.
+  Consider using the @Inject decorator to specify an injection token. [plugin angular-compiler]
+
+    src/app/auth/login/login.component.ts:35:22:
+      35 │   constructor(private user: UserService) { }
+         ╵                       ~~~~
+
+  This type does not have a value, so it cannot be used as injection token.
+
+    src/app/auth/login/login.component.ts:35:28:
+      35 │   constructor(private user: UserService) { }
+         ╵                             ~~~~~~~~~~~
+
+
+✘ [ERROR] Multiple exports with the same name "LoginComponent"
+
+    src/app/auth/login/login.component.ts:48:9:
+      48 │ export { LoginComponent };
+         ╵          ~~~~~~~~~~~~~~
+
+  The name "LoginComponent" was originally exported here:
+
+    src/app/auth/login/login.component.ts:27:9:
+      27 │ export { LoginComponent };
+         ╵          ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/auth/signup/signup.component.html:11:85:
+      11 │ ...ass="form-control" placeholder="Name" [(ngModel)]="userData.name">
+         ╵                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component SignUpComponent.
+
+    src/app/auth/signup/signup.component.ts:8:15:
+      8 │   templateUrl: './signup.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/auth/signup/signup.component.html:15:87:
+      15 │ ...s="form-control" placeholder="Phone" [(ngModel)]="userData.phone">
+         ╵                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component SignUpComponent.
+
+    src/app/auth/signup/signup.component.ts:8:15:
+      8 │   templateUrl: './signup.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/auth/signup/signup.component.html:19:87:
+      19 │ ...s="form-control" placeholder="Email" [(ngModel)]="userData.email">
+         ╵                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component SignUpComponent.
+
+    src/app/auth/signup/signup.component.ts:8:15:
+      8 │   templateUrl: './signup.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/auth/signup/signup.component.html:23:97:
+      23 │ ...m-control" placeholder="********" [(ngModel)]="userData.password">
+         ╵                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component SignUpComponent.
+
+    src/app/auth/signup/signup.component.ts:8:15:
+      8 │   templateUrl: './signup.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngModel' since it isn't a known property of 'input'. [plugin angular-compiler]
+
+    src/app/auth/signup/signup.component.html:27:99:
+      27 │ ...control" placeholder="********" [(ngModel)]="userData.c_password">
+         ╵                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component SignUpComponent.
+
+    src/app/auth/signup/signup.component.ts:8:15:
+      8 │   templateUrl: './signup.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] The symbol "LoginComponent" has already been declared
+
+    src/app/auth/login/login.component.ts:28:4:
+      28 │ let LoginComponent = class LoginComponent {
+         ╵     ~~~~~~~~~~~~~~
+
+  The symbol "LoginComponent" was originally declared here:
+
+    src/app/auth/login/login.component.ts:3:4:
+      3 │ let LoginComponent = class LoginComponent {
+        ╵     ~~~~~~~~~~~~~~
+
+
+✘ [ERROR] Multiple exports with the same name "LoginComponent"
+
+    src/app/auth/login/login.component.ts:48:9:
+      48 │ export { LoginComponent };
+         ╵          ~~~~~~~~~~~~~~
+
+  The name "LoginComponent" was originally exported here:
+
+    src/app/auth/login/login.component.ts:27:9:
+      27 │ export { LoginComponent };
+         ╵          ~~~~~~~~~~~~~~
+
+
+Watch mode enabled. Watching for file changes...
