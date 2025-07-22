@@ -9,8 +9,8 @@ import Keyboard from 'simple-keyboard';
   styleUrls: ['./signup.component.css']
 })
 export class SignUpComponent implements OnInit {
-  userData: any;
-  keyboard: Keyboard;
+  userData: any = {name: '', phone: '', email: '', password: '', c_password: ''};
+  keyboard!: Keyboard;
   value = "";
   constructor(private user: UserService) { }
 

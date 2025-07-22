@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth.service';
+import { UserService } from './user.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -29,12 +30,15 @@ import { LoginComponent } from './auth/login/login.component';
     FormsModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [  provideHttpClient(withInterceptorsFromDi()),  // <-- NEW way to provide HttpClient
+  providers: [
+    UserService,
+    provideHttpClient(withInterceptorsFromDi()),  // <-- NEW way to provide HttpClient
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptor,
       multi: true
-    }],
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
