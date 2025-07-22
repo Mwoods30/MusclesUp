@@ -17,7 +17,7 @@ export const routes: Routes = [
       import('./workout/workout.component').then((m) => m.WorkoutComponent),
   },
  {
-    path: 'signin',
+    path: 'sign-up',
     loadComponent: () =>
       import('./auth/signup/signup.component').then((m) => m.SignUpComponent),
   },

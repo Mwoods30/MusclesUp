@@ -14,16 +14,13 @@ import { WorkoutComponent } from './workout/workout.component';
 import { SignUpComponent } from './auth/signup/signup.component';
 
 import { routes } from './app.routes';
-import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ProfileComponent,
-    WorkoutComponent,
-    SignUpComponent,
-    LoginComponent
+    WorkoutComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,16 @@
-import { Component, OnInit,ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { UserService } from "../../user.service";
 import Keyboard from 'simple-keyboard';
 @Component({
-  
   selector: 'app-sign-up',
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   encapsulation: ViewEncapsulation.None,
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.css']
+  styleUrls: ['./signup.component.css'],
+  providers: [UserService]
 })
 export class SignUpComponent implements OnInit {
   userData: any = {name: '', phone: '', email: '', password: '', c_password: ''};
